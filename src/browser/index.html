@@ -48,6 +48,13 @@
 	<body>
 		<h1>Gutenberg attached to a plain textarea</h1>
 		<p>The textarea can be converted into a Gutenberg editor. Any existing content will be converted into blocks. Multiple editors can be added, with a seperate edit history for each.</p>
+		<textarea id="editor1"></textarea>
+
+		<script>
+			wp.attachEditor( document.getElementById( 'editor1' ) );
+		</script>
+
+
 
 		<div class="editors">
 			<div class="editor-container cloner">
