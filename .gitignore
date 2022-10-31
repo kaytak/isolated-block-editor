@@ -7,5 +7,5 @@ dist
 /playwright-report/
 /dist-pw/
 /build/
-/build-module/
-/build-browser
+build-module
+build-browser
