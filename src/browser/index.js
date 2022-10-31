@@ -9,7 +9,7 @@ import { render, unmountComponentAtNode } from '@wordpress/element';
  */
 
 import './style.scss';
-import IsolatedBlockEditor from '../index';
+import IsolatedBlockEditor, { EditorHeadingSlot, ToolbarSlot } from '../index';
 
 /** @typedef {import('../index').BlockEditorSettings} BlockEditorSettings */
 
@@ -80,7 +80,12 @@ function attachEditor( textarea, userSettings = {} ) {
 			onLoad={ ( parser, rawHandler ) => onLoad( textarea.value, parser, rawHandler ) }
 			onSaveContent={ ( content ) => saveBlocks( content, textarea ) }
 			onError={ () => document.location.reload() }
-		></IsolatedBlockEditor>,
+		>
+			<EditorHeadingSlot>heading test</EditorHeadingSlot>
+<ToolbarSlot>
+			<button>Beep!</button>
+		</ToolbarSlot>
+		</IsolatedBlockEditor>,
 		editor
 	);
 }
